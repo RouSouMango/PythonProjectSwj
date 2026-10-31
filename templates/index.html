@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assignment Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Student Assignment Tracker</h1>
+<p>Keep track of your assignments and due dates.</p>
+
+<div class="assignment-form">
+    <h2>Add a New Assignment</h2>
+
+    <form id="assignmentForm">
+        <label for="title">Assignment Name:</label>
+        <input type="text" id="title" placeholder="Enter assignment name" required>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" placeholder="Enter course name" required>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" required>
+
+        <button type="submit">Add Assignment</button>
+    </form>
+</div>
+
+<div class="assignment-list">
+    <h2>My Assignments</h2>
+    <ul id="assignmentList"></ul>
+</div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
